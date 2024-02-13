@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon" />
+    <title>Yummy</title>
+  </head>
+  <body>
+    <!-- Start Spinner -->
+    <div class="spiner">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <!-- End Spinner -->
+
+    <!-- start sidebar -->
+    <div class="header d-flex" id="header">
+      <div
+        class="menu p-3 bg-black text-white d-flex flex-column justify-content-between"
+        id="menu"
+      >
+        <ul class="list overflow-hidden">
+          <li class="py-2 position-relative" onclick="searchInputs();closeMenu()">
+            <a href="#">Search</a>
+          </li>
+          <li class="position-relative py-2" onclick="getCategory();closeMenu()">
+            <a href="#">Categories</a>
+          </li>
+          <li class="position-relative py-2" onclick="getArea();closeMenu()">
+            <a href="#">Area</a>
+          </li>
+          <li class="position-relative py-2" onclick="getIngredients();closeMenu()">
+            <a href="#">Ingredients</a>
+          </li>
+          <li class="position-relative py-2" onclick="showContacts();closeMenu()">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+        <div class="contact">
+          <p>Copyright <span class="text-danger">Mohamed Morad</span> © 2024 All Rights Reserved.</p>
+        </div>
+      </div>
+      <nav
+        class="bg-white p-3 sidebar d-flex flex-column justify-content-between align-items-center"
+      >
+        <a href="index.html">
+          <img src="imgs/logo.png" alt="" id="logo" />
+        </a>
+        <i class="fas fa-solid fa-bars fs-2" id="bars"></i>
+        <span class="fs-2 fw-bold" id="close">X</span>
+        <i class="fa-solid fa-x fs-2 fw-bold" id="close"></i>
+        <i class="fas fa-solid fa-globe fs-5"></i>
+      </nav>
+    </div>
+    <!-- End sidebar -->
+
+    <!-- Start Body -->
+    <div class="body">
+      <!-- Search Inputs -->
+      <div class="container w-100" id="search"></div>
+
+      <div class="container">
+        <div class="row" id="row"></div>
+      </div>
+    </div>
+    <!-- End Body -->
+
+    <!-- <div class="col-md-6 my-2">
+      <input onkeyup="searchByFirstLitter(this.value)" maxlength="1" type="text" class="text-white form-control bg-transparent" placeholder="Search By First Litter">
+    </div> -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
